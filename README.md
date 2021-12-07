@@ -1,19 +1,42 @@
-# Excape-Room-Python_College
-This is a very simple game that is an excape room for CS 190. Containing two stages.
+# Escape Room 'Game'
 
+### Python_College
 
-CS-190 Final Project 
+This is a very simple game that is an escape room for CS 190. Containing two stages.
 
- 
+CS-190 Final Project
 
-Setting – Escape Room, 3 stages, score is how long it takes to complete  
+Setting – Escape Room, 3 stages, score is how long it takes to complete
 
-Init -  In a room filled with random items 
+Init - In a room filled with random items
 
-1.A - Find the digits to the safe ( 
+1.A - Find the digits to the safe (
 
-1.B Stage (open the safe) – in room with items  
+1.B Stage (open the safe) – in room with items
 
-2 Stage (combo in safe) - file opens with 3 numbers in the file they must enter numbers in the correct order 
+2 Stage (combo in safe) - file opens with 3 numbers in the file they must enter numbers in the correct order
 
-Stage 3 -  
+Stage 3 -
+
+**TODO**
+
+- [ ] Main .py
+    - [ ] Basic Run Test
+    - [ ] Import Stage One
+    - [ ] Import Stage Two
+- [ ] Stage One .py
+    - [ ] Random Boxes
+    - [ ] Drawer With key-card
+        - [ ] Click To open
+        - [ ] Create File (Label Key-card)
+    - [ ] Safe Implementation
+        - [ ] Check if file Key-card is present
+        - [ ] Display 4 Digit Combo (Final Door)
+    - [ ] Final Door
+        - [ ] Open with 4 Digit Combo
+- [ ] Stage Two .py
+    -[ ] Import Grid JPG
+    - [ ] Lock One
+        - [ ] Movable Boxes (3)
+    - [ ] Completion Displays Time taken
+    
