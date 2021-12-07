@@ -1,3 +1,10 @@
+from tkinter import *
 
-def main():
-    print("Hello World")
+root = Tk()
+
+window = root.geometry('100x100')
+
+label = Label(window, text="a generic Toplevel window")
+label.pack()
+
+root.mainloop()
