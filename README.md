@@ -35,7 +35,7 @@ Stage 3 -
     - [ ] Final Door
         - [ ] Open with 4 Digit Combo
 - [ ] Stage Two .py
-    -[ ] Import Grid JPG
+    - [ ] Import Grid JPG
     - [ ] Lock One
         - [ ] Movable Boxes (3)
     - [ ] Completion Displays Time taken
