@@ -1,10 +1,11 @@
 from tkinter import *
 
-root = Tk()
 
-window = root.geometry('100x100')
+def Main(root):
+    newWindow = Toplevel(root)
+    newWindow.title('Stage One')
+    newWindow.geometry('400x400')
+    Label(newWindow, text='Start import').pack()
+    newWindow.mainloop()
 
-label = Label(window, text="a generic Toplevel window")
-label.pack()
-
-root.mainloop()
+    pass
