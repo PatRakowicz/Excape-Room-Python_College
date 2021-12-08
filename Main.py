@@ -7,12 +7,12 @@ from Stage_One import Main
 
 # root window
 root = Tk()
-root.geometry('250x200')
+root.geometry('180x180')
 root.resizable(False, False)
 root.title('Escape Room')
 
 # Windows Text
-EscapeRoom = Label(root, text='Main Menu')
+mainMenu = Label(root, text='Main Menu')
 
 # Start game
 start_button = Button(root, text='Start', command=lambda: Main(root))
@@ -21,7 +21,7 @@ start_button = Button(root, text='Start', command=lambda: Main(root))
 exit_button = Button(root, text='Exit', command=lambda: root.quit())
 
 # All packing for Main
-EscapeRoom.pack()
+mainMenu.pack()
 start_button.pack(
     ipadx=3,
     ipady=3,
