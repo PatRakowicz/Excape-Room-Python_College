@@ -21,9 +21,11 @@ Stage 3 -
 **TODO**
 
 - [ ] Main .py
-    - [ ] Basic Run Test
-    - [ ] Import Stage One
-    - [ ] Import Stage Two
+    - [x] Basic Run Test
+    - [x] Import Stage One
+    - [x] Import Stage Two
+    - [ ] Completion Displays Time taken
+    - [ ] Below Done
 - [ ] Stage One .py
     - [ ] Random Boxes
     - [ ] Drawer With key-card
@@ -38,5 +40,4 @@ Stage 3 -
     - [ ] Import Grid JPG
     - [ ] Lock One
         - [ ] Movable Boxes (3)
-    - [ ] Completion Displays Time taken
     
