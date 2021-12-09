@@ -16,11 +16,11 @@ mainMenu = Label(root, text='Main Menu')
 
 # Start/Exit Game
 start_button = Button(root, text='Start', command=lambda: Main(root))
-exit_button = Button(root, text='Exit', command=lambda: root.quit())
-
-# Timer
-end_time = time.time()
+# start Timer
 start_time = time.time()
+end_time = time.time()
+
+exit_button = Button(root, text='Exit', command=lambda: root.quit())
 
 # TODO click on exit door print final time
 # print user time
