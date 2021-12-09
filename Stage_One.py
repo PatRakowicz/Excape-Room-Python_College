@@ -26,10 +26,12 @@ def safeClick(*args):
     button = Button(x, text='Enter', command=fx)
     button.pack()
 
-
+# opens keycard.txt which contains 'keycard.ex'
 def crateClick():
-    print('clicked on create')
-    # TODO Create file with keycard
+    key_file = open('keycard.txt')
+    print(key_file.read())
+    key_file.close()
+    
 
 
 # safe click action
