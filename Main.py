@@ -1,10 +1,9 @@
 # Main Run File
 from tkinter import *
 from Stage_One import Main
-import time 
-# from Stage_Two import Main
+import time
 
-# TODO Timer
+# from Stage_Two import Main
 
 # root window
 root = Tk()
@@ -15,22 +14,17 @@ root.title('Escape Room')
 # Windows Text
 mainMenu = Label(root, text='Main Menu')
 
-# start timer
-start_time = time.time()
-
-# Start game
+# Start/Exit Game
 start_button = Button(root, text='Start', command=lambda: Main(root))
-
-# Exit Game
 exit_button = Button(root, text='Exit', command=lambda: root.quit())
 
-# end timer
+# Timer
 end_time = time.time()
+start_time = time.time()
 
 # print user time
 total_time = end_time - start_time
 print('you took ' + str(total_time) + ' to complete the escape room')
-
 
 # All packing for Main
 mainMenu.pack()
