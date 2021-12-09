@@ -29,7 +29,7 @@ end_time = time.time()
 
 # print user time
 total_time = end_time - start_time
-print('you took' + total_time + 'to complete the escape room')
+print('you took ' + str(total_time) + ' to complete the escape room')
 
 
 # All packing for Main
