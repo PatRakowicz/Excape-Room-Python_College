@@ -36,9 +36,13 @@ def crateClick():
 
 # safe click action
 def fx():
-    # TODO print code
+    # checks for valid 'keycard' input if correct displays code if not clears entry box and displays error
     key = entry.get()
-    print(key)
+    if key == 'keycard.ex':
+        messagebox.showinfo('Code', '1776')
+    else:
+        entry.delete('0', 'end)
+        messagebox.showwarning('Error', 'Invalid input')
 
 
 # Everything goes in here
