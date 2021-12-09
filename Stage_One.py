@@ -15,14 +15,13 @@ def clicked(*args):
 def safe_click(*args):
     global entry
     x = Toplevel()
-    canvas_two = Canvas(x, width=500, height=500)
     entry = Entry(x)
     entry.pack()
     button = Button(x, text='Enter', command=fx)
     button.pack()
 
 
-# safe click action 
+# safe click action
 def fx():
     key = entry.get()
     print(key)
@@ -47,8 +46,8 @@ def Main(root):
     canvas.pack(fill="both", expand=True)
 
     # safe
-    safe = canvas.create_rectangle(0, 215, 50, 270, fill='gray', tag='safe')
-    canvas.create_text(25, 200, text="Safe", fill="black", font=('Helvetica 15 bold'))
+    canvas.create_rectangle(0, 215, 50, 270, fill='gray', tag='safe')
+    canvas.create_text(25, 200, text="Safe", fill="black", font='Helvetica 15 bold')
     canvas.tag_bind('safe', '<Button-1>', safe_click)
 
     newWindow.mainloop()
