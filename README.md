@@ -36,8 +36,5 @@ Stage 3 -
         - [ ] Display 4 Digit Combo (Final Door)
     - [ ] Final Door
         - [ ] Open with 4 Digit Combo
-- [ ] Stage Two .py
-    - [ ] Import Grid JPG
-    - [ ] Lock One
-        - [ ] Movable Boxes (3)
+- [x] Removed stage two
     
