@@ -24,17 +24,17 @@ Stage 3 -
     - [x] Basic Run Test
     - [x] Import Stage One
     - [x] Import Stage Two
-    - [ ] Completion Displays Time taken
+    - [x] Completion Displays Time taken
     - [ ] Below Done
 - [ ] Stage One .py
     - [ ] Random Boxes
     - [x] Drawer With key-card
         - [x] Click To open
         - [ x Create File (Label Key-card)
-    - [ ] Safe Implementation
-        - [ ] Check if file Key-card is present
-        - [x] Display 4 Digit Combo (Final Door)
-    - [ ] Final Door
-        - [ ] Open with 4 Digit Combo
+    - [x] Safe Implementation
+        - [x] Check if file Key-card is present
+        - [x] Display 4 Digit Combo (Final Door) Randomized
+    - [x] Final Door
+        - [x] Open with 4 Digit Combo
 - [x] Removed stage two
     
