@@ -40,10 +40,9 @@ def safeClick(*args):
 
 # make keycard.txt with content for safe
 def crateClick(*args):
-    print('crate click')
     # check if file exists, if not creates file with parameters keycard.ex
-    if not os.path.exists("keycard.txt"):
-        key_file = open('keycard.txt', 'w+')
+    if not os.path.exists("keycard"):
+        key_file = open('keycard', 'w+')
         key_file.write("keycard.ex")
         key_file.close()
     else:
@@ -53,7 +52,6 @@ def crateClick(*args):
 # safe click action
 def keycardCheck():
     # checks for valid 'keycard' input if correct displays code if not clears entry box and displays error
-    print(fDigitNum)
     with open(entry.get()) as f:
         line = f.readline()
         if line == 'keycard.ex':
@@ -66,7 +64,6 @@ def keycardCheck():
 # exit door button action
 def exitDoor():
     exit_code = code_entry.get()
-    print(fDigitNum)
     if exit_code == str(fDigitNum):
         # end timer + calculate final time
         end_time = time.time()
