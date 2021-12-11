@@ -49,7 +49,7 @@ def crateClick(*args):
         print("file already exists")
 # drawer click action
 def drawerClick(*args):
-    messagebox.showinfo('Message', 'You found a nickel!')
+    messagebox.showinfo('Hint', 'Check files for keycard')
 
 # bookshelf click action    
 def shelfClick(*args):
@@ -110,13 +110,13 @@ def Main(root):
 
     # Random Crate
     canvas.create_rectangle(215, 215, 270, 270, fill='green', tag='drawer')
-    canvas.create_text(240, 210, text='Drawer', fill='black', font='Helvetica 15 bold')
+    canvas.create_text(240, 205, text='Drawer', fill='black', font='Helvetica 15 bold')
     canvas.tag_bind('drawer', '<Button-1>', drawerClick)
                            
     # Random Crate 2
-    canvas.create_rectangle(450, 450, 500, 500, fill='brown', tag='bookshelf')
-    canvas.create_text(475, 445, text='Bookshelf', fill='black', font='Helvetica 15 bold')
-    canvas.tag_bind('drawer', '<Button-1>', shelfClick)
+    canvas.create_rectangle(450, 200, 500, 250, fill='brown', tag='bookshelf')
+    canvas.create_text(450, 190, text='Bookshelf', fill='black', font='Helvetica 15 bold')
+    canvas.tag_bind('bookshelf', '<Button-1>', shelfClick)
     
     # Random Crate 3
 
