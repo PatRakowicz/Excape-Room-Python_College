@@ -30,7 +30,7 @@ Stage 3 -
     - [ ] Random Boxes
     - [x] Drawer With key-card
         - [x] Click To open
-        - [ x Create File (Label Key-card)
+        - [x] Create File (Label Key-card)
     - [x] Safe Implementation
         - [x] Check if file Key-card is present
         - [x] Display 4 Digit Combo (Final Door) Randomized
