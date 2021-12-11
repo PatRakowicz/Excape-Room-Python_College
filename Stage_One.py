@@ -9,8 +9,15 @@ from tkinter import *
 #   Create shelf with key-card
 
 def exitStage(*args):
+    global code_entry
+    x = Toplevel()
+    code_entry = Entry(x)
+    code_entry.pack()
+    button = Button(x, text='Enter', command=lx)
+    button.pack()
     # TODO Close window
     #   Print 'Game Complete'
+    # I think we need to move this stuff below outside of this function
     newWindow = Toplevel()
     newWindow.geometry('100x100')
     newWindow.resizable(False, False)
@@ -43,7 +50,15 @@ def fx():
     else:
         entry.delete('0', 'end)
         messagebox.showwarning('Error', 'Invalid input')
-
+# exit door button action
+def lx():
+    exit_code = code_entry.get()
+    if exit_code == '1776':
+                     # not sure if a variable can be included in a message box
+        messagebox.showinfo('Congratulations', 'you completed the escape room in' + str(final_time))
+    else:
+        code_entry.delete('0', 'end)
+        messagebox.showwarning('Error', 'Invalid input')
 
 # Everything goes in here
 def Main(root):
