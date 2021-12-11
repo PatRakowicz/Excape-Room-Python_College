@@ -76,7 +76,7 @@ def exitDoor():
         end_time = time.time()
         final_time = end_time - start_time
         # not sure if a variable can be included in a message box
-        messagebox.showinfo('Congratulations!', 'You completed the escape room in ' + round(final_time, 2))
+        messagebox.showinfo('Congratulations!', 'You completed the escape room in ' + str(round(final_time, 2)) + ' seconds!')
         messagebox.showinfo('Exit Game', 'Use exit box in Main Menu to exit game')
     else:
         code_entry.delete('0', 'end')
