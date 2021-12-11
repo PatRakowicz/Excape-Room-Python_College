@@ -1,6 +1,10 @@
 # Stage One
 from tkinter import *
+from tkinter import messagebox
+import time
 
+#start timer
+start_time = time.time()
 
 # TODO Stage One
 #   Create Exit (work in progress) - pat
@@ -54,6 +58,9 @@ def fx():
 def lx():
     exit_code = code_entry.get()
     if exit_code == '1776':
+                    # end timer + calculate final time
+        end_time = time.time()
+        final_time = end_time - start_time
                      # not sure if a variable can be included in a message box
         messagebox.showinfo('Congratulations', 'you completed the escape room in' + str(final_time))
     else:
