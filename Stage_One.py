@@ -2,15 +2,11 @@
 from tkinter import *
 from tkinter import messagebox
 import time
+import os
 
-#start timer
+# start timer
 start_time = time.time()
 
-# TODO Stage One
-#   Create Exit (work in progress) - pat
-#   Create safe
-#   Create Random boxes
-#   Create shelf with key-card
 
 def exitStage(*args):
     global code_entry
@@ -19,8 +15,6 @@ def exitStage(*args):
     code_entry.pack()
     button = Button(x, text='Enter', command=lx)
     button.pack()
-    # TODO Close window
-    #   Print 'Game Complete'
     # I think we need to move this stuff below outside of this function
     newWindow = Toplevel()
     newWindow.geometry('100x100')
@@ -34,38 +28,45 @@ def safeClick(*args):
     x = Toplevel()
     entry = Entry(x)
     entry.pack()
-    button = Button(x, text='Enter', command=fx)
+    button = Button(x, text='Enter', command=keycardCheck)
     button.pack()
 
-# opens keycard.txt which contains 'keycard.ex'
-def crateClick():
-    key_file = open('keycard.txt')
-    print(key_file.read())
-    key_file.close()
-    
+
+# make keycard.txt with content for safe
+def crateClick(*args):
+    print('crate click')
+    if not os.path.exists("keycard.txt"):
+        key_file = open('keycard.txt', 'w+')
+        key_file.write("keycard.ex")
+        key_file.close()
+    else:
+        print("file already exists")
 
 
 # safe click action
-def fx():
+def keycardCheck():
     # checks for valid 'keycard' input if correct displays code if not clears entry box and displays error
     key = entry.get()
     if key == 'keycard.ex':
         messagebox.showinfo('Code', '1776')
     else:
-        entry.delete('0', 'end)
+        entry.delete('0', 'end')
         messagebox.showwarning('Error', 'Invalid input')
+
+
 # exit door button action
 def lx():
     exit_code = code_entry.get()
     if exit_code == '1776':
-                    # end timer + calculate final time
+        # end timer + calculate final time
         end_time = time.time()
         final_time = end_time - start_time
-                     # not sure if a variable can be included in a message box
+        # not sure if a variable can be included in a message box
         messagebox.showinfo('Congratulations', 'you completed the escape room in' + str(final_time))
     else:
-        code_entry.delete('0', 'end)
+        code_entry.delete('0', 'end')
         messagebox.showwarning('Error', 'Invalid input')
+
 
 # Everything goes in here
 def Main(root):
@@ -90,7 +91,7 @@ def Main(root):
     # Crate w/ Keycard
     canvas.create_rectangle(400, 425, 495, 475, fill='blue', tag='crate')
     canvas.create_text(445, 415, text='Crate', fill='black', font='Helvetica 15 bold')
-    canvas.tag_bind('create', '<Button-1>', crateClick)
+    canvas.tag_bind('crate', '<Button-1>', crateClick)
 
     # Packing
     canvas.pack(fill="both", expand=True)
