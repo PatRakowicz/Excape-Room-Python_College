@@ -47,6 +47,13 @@ def crateClick(*args):
         key_file.close()
     else:
         print("file already exists")
+# drawer click action
+def drawerClick(*args):
+    messagebox.showinfo('Message', 'You found a nickel!')
+
+# bookshelf click action    
+def shelfClick(*args):
+    messagebox.showinfo('Message', 'Hmmm some interesting books here')
 
 
 # safe click action
@@ -69,7 +76,7 @@ def exitDoor():
         end_time = time.time()
         final_time = end_time - start_time
         # not sure if a variable can be included in a message box
-        messagebox.showinfo('Congratulations!', 'You completed the escape room in ' + str(final_time))
+        messagebox.showinfo('Congratulations!', 'You completed the escape room in ' + round(final_time, 2))
         messagebox.showinfo('Exit Game', 'Use exit box in Main Menu to exit game')
     else:
         code_entry.delete('0', 'end')
@@ -102,7 +109,15 @@ def Main(root):
     canvas.tag_bind('crate', '<Button-1>', crateClick)
 
     # Random Crate
+    canvas.create_rectangle(215, 215, 270, 270, fill='green', tag='drawer')
+    canvas.create_text(240, 210, text='Drawer', fill='black', font='Helvetica 15 bold')
+    canvas.tag_bind('drawer', '<Button-1>', drawerClick)
+                           
     # Random Crate 2
+    canvas.create_rectangle(450, 450, 500, 500, fill='brown', tag='bookshelf')
+    canvas.create_text(475, 445, text='Bookshelf', fill='black', font='Helvetica 15 bold')
+    canvas.tag_bind('drawer', '<Button-1>', shelfClick)
+    
     # Random Crate 3
 
     # Packing
