@@ -16,16 +16,13 @@ mainMenu = Label(root, text='Main Menu')
 
 # Start/Exit Game
 start_button = Button(root, text='Start', command=lambda: Main(root))
-# start Timer
-start_time = time.time()
-end_time = time.time()
+
+
 
 exit_button = Button(root, text='Exit', command=lambda: root.quit())
 
 # TODO click on exit door print final time
 # print user time
-total_time = end_time - start_time
-print('you took ' + str(total_time) + ' to complete the escape room')
 
 # All packing for Main
 mainMenu.pack()
