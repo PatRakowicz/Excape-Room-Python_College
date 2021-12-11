@@ -28,12 +28,12 @@ Stage 3 -
     - [ ] Below Done
 - [ ] Stage One .py
     - [ ] Random Boxes
-    - [ ] Drawer With key-card
-        - [ ] Click To open
-        - [ ] Create File (Label Key-card)
+    - [x] Drawer With key-card
+        - [x] Click To open
+        - [ x Create File (Label Key-card)
     - [ ] Safe Implementation
         - [ ] Check if file Key-card is present
-        - [ ] Display 4 Digit Combo (Final Door)
+        - [x] Display 4 Digit Combo (Final Door)
     - [ ] Final Door
         - [ ] Open with 4 Digit Combo
 - [x] Removed stage two
