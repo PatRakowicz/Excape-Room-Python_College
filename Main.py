@@ -7,8 +7,8 @@ import os
 def exitGame():
     root.quit()
     # delete keycard on game exit
-    if os.path.exists("keycard.txt"):
-        os.remove("keycard.txt")
+    if os.path.exists("keycard"):
+        os.remove("keycard")
     else:
         print("file already Deleted")
 
