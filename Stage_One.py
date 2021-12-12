@@ -30,6 +30,7 @@ def safeClick(*args):
     global entry
     x = Toplevel()
     entry = Entry(x)
+    messagebox.showinfo('Input Keycard', 'Input keycard file')
     keycardRequired = Label(x, text='Keycard Required')
     button = Button(x, text='Enter', command=keycardCheck)
 
@@ -41,17 +42,21 @@ def safeClick(*args):
 # make keycard.txt with content for safe
 def crateClick(*args):
     # check if file exists, if not creates file with parameters keycard.ex
+    messagebox.showinfo('Keycard', 'Keycard Found, look in directory')
     if not os.path.exists("keycard"):
         key_file = open('keycard', 'w+')
         key_file.write("keycard.ex")
         key_file.close()
     else:
         print("file already exists")
+
+
 # drawer click action
 def drawerClick(*args):
     messagebox.showinfo('Hint', 'Check files for keycard')
 
-# bookshelf click action    
+
+# bookshelf click action
 def shelfClick(*args):
     messagebox.showinfo('Message', 'Hmmm some interesting books here')
 
@@ -59,6 +64,7 @@ def shelfClick(*args):
 # safe click action
 def keycardCheck():
     # checks for valid 'keycard' input if correct displays code if not clears entry box and displays error
+
     with open(entry.get()) as f:
         line = f.readline()
         if line == 'keycard.ex':
@@ -76,7 +82,8 @@ def exitDoor():
         end_time = time.time()
         final_time = end_time - start_time
         # not sure if a variable can be included in a message box
-        messagebox.showinfo('Congratulations!', 'You completed the escape room in ' + str(round(final_time, 2)) + ' seconds!')
+        messagebox.showinfo('Congratulations!',
+                            'You completed the escape room in ' + str(round(final_time, 2)) + ' seconds!')
         messagebox.showinfo('Exit Game', 'Use exit box in Main Menu to exit game')
     else:
         code_entry.delete('0', 'end')
@@ -112,12 +119,12 @@ def Main(root):
     canvas.create_rectangle(215, 215, 270, 270, fill='green', tag='drawer')
     canvas.create_text(240, 205, text='Drawer', fill='black', font='Helvetica 15 bold')
     canvas.tag_bind('drawer', '<Button-1>', drawerClick)
-                           
+
     # Random Crate 2
     canvas.create_rectangle(450, 200, 500, 250, fill='brown', tag='bookshelf')
     canvas.create_text(450, 190, text='Bookshelf', fill='black', font='Helvetica 15 bold')
     canvas.tag_bind('bookshelf', '<Button-1>', shelfClick)
-    
+
     # Random Crate 3
 
     # Packing
