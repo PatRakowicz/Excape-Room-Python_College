@@ -25,9 +25,9 @@ Stage 3 -
     - [x] Import Stage One
     - [x] Import Stage Two
     - [x] Completion Displays Time taken
-    - [ ] Below Done
+    - [x] Below Done
 - [ ] Stage One .py
-    - [ ] Random Boxes
+    - [x] Random Boxes
     - [x] Drawer With key-card
         - [x] Click To open
         - [x] Create File (Label Key-card)
