@@ -20,14 +20,14 @@ Stage 3 -
 
 **TODO**
 
-- [ ] Main .py
+- [x] Main .py
     - [x] Basic Run Test
     - [x] Import Stage One
     - [x] Import Stage Two
     - [x] Completion Displays Time taken
-    - [ ] Below Done
-- [ ] Stage One .py
-    - [ ] Random Boxes
+    - [x] Below Done
+- [x] Stage One .py
+    - [x] Random Boxes
     - [x] Drawer With key-card
         - [x] Click To open
         - [x] Create File (Label Key-card)
